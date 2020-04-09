@@ -1,7 +1,12 @@
-# Pull base image 
+# Pull Base Image 
 From tomcat:8-jre8 
 
-# Maintainer 
+# Maintainer by the user 
 MAINTAINER "subbu" 
-COPY ./webapp.war /usr/local/tomcat/webapps
-RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
+
+#Whom to exeute the commands
+USER root
+
+#copy the artifatory to tomcat webapp loation
+COPY webapp/target/*.war /usr/local/tomcat/webapps
+#RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
