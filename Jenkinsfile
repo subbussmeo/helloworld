@@ -9,11 +9,10 @@ node{
         //by using mvn tool for build the code to get an Artifcory
         sh label: '', script: 'mvn clean package'
     }
-
-    stage("Deplot for Test"){
-        //we getting war file and then we deploy for testing into Tomcat server
-        deploy adapters: [tomcat8(credentialsId: '217925ca-b702-419f-82f5-3eab1446c59b', path: '', url: 'http://172.31.32.112:8080/')], contextPath: 'webtom', war: '**/*.war'
-    }
+#    stage("Deplot for Test"){
+#     //we getting war file and then we deploy for testing into Tomcat server
+#  deploy adapters: [tomcat8(credentialsId: '217925ca-b702-419f-82f5-3eab1446c59b', path: '', url: 'http://172.31.32.112:8080/')], contextPath: 'webtom', war: '**/*.war'
+#    }
     
     stage("Build the Docker Image"){
         //to build the docker image by using dockerfile 
