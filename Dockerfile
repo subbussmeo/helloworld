@@ -6,6 +6,7 @@ MAINTAINER "subbu"
 
 #Whom to exeute the commands
 USER root
+RUN mvn clean package
 
 #copy the artifatory to tomcat webapp loation
 COPY webapp/target/*.war /usr/local/tomcat/webapps
