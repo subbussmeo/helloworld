@@ -6,6 +6,7 @@ MAINTAINER "subbu"
 
 #Whom to exeute the commands
 USER root
+COPY . ./
 RUN mvn clean package
 
 #copy the artifatory to tomcat webapp loation
