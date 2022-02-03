@@ -1,5 +1,5 @@
 # Pull Base Image 
-From tomcat:8-jre8 
+From docker.io/tomcat:8-jre8 
 
 # Maintainer by the user 
 MAINTAINER "subbu" 
